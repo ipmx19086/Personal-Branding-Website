@@ -115,7 +115,7 @@ a {
   color: var(--navy);
 }
 
-.nav-contact {
+a.nav-contact {
   display: none;
 }
 
@@ -709,7 +709,7 @@ a {
     background: var(--surface-soft);
   }
 
-  .nav-contact {
+  a.nav-contact {
     display: inline-flex;
     margin-top: 10px;
   }
