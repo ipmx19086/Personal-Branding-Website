@@ -481,6 +481,13 @@ a.nav-contact {
   font-weight: 700;
 }
 
+.dates {
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
 .timeline-content h3 {
   margin: 0 0 12px;
   color: var(--navy);
@@ -585,6 +592,61 @@ a.nav-contact {
 
 .achievement-card.highlight .achievement-year {
   color: var(--cyan);
+}
+
+.testimonials-section {
+  background: linear-gradient(180deg, rgba(238, 243, 247, 0.72), rgba(255, 255, 255, 0));
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.testimonial-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 32px;
+}
+
+.testimonial-mark {
+  font-family: "Manrope", sans-serif;
+  font-size: 2.8rem;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--cyan);
+}
+
+.testimonial-quote {
+  flex-grow: 1;
+  margin: 14px 0 24px;
+  color: var(--text);
+  font-size: 0.98rem;
+  line-height: 1.65;
+}
+
+.testimonial-author {
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+}
+
+.testimonial-name {
+  display: block;
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+  color: var(--navy);
+}
+
+.testimonial-role {
+  display: block;
+  margin-top: 3px;
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.5;
 }
 
 .education-list {
@@ -750,7 +812,8 @@ a.nav-contact {
   }
 
   .expertise-grid,
-  .achievement-grid {
+  .achievement-grid,
+  .testimonial-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -820,7 +883,8 @@ a.nav-contact {
   }
 
   .expertise-grid,
-  .achievement-grid {
+  .achievement-grid,
+  .testimonial-grid {
     grid-template-columns: 1fr;
   }
 
