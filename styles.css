@@ -649,6 +649,48 @@ a.nav-contact {
   line-height: 1.5;
 }
 
+.proof-gallery {
+  margin-top: 44px;
+  padding-top: 44px;
+  border-top: 1px solid var(--line);
+}
+
+.proof-gallery-heading {
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+  color: var(--navy);
+  font-size: 1.15rem;
+  margin-bottom: 20px;
+}
+
+.proof-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.proof-card {
+  margin: 0;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.proof-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  background: var(--surface-soft);
+}
+
+.proof-card figcaption {
+  padding: 16px;
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
 .education-list {
   display: grid;
   gap: 16px;
@@ -813,7 +855,8 @@ a.nav-contact {
 
   .expertise-grid,
   .achievement-grid,
-  .testimonial-grid {
+  .testimonial-grid,
+  .proof-gallery-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -884,7 +927,8 @@ a.nav-contact {
 
   .expertise-grid,
   .achievement-grid,
-  .testimonial-grid {
+  .testimonial-grid,
+  .proof-gallery-grid {
     grid-template-columns: 1fr;
   }
 
