@@ -558,6 +558,17 @@ a.nav-contact {
   gap: 18px;
 }
 
+.timeline-footnote {
+  margin: 18px 4px 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.timeline-footnote a {
+  color: var(--blue);
+  font-weight: 700;
+}
+
 .timeline-item {
   display: grid;
   grid-template-columns: 240px minmax(0, 1fr);
@@ -676,6 +687,115 @@ a.nav-contact {
   flex-wrap: wrap;
   gap: 10px;
   margin-top: 26px;
+}
+
+.expertise-visual-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: 28px;
+  align-items: center;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 28px;
+}
+
+.radar-chart-wrap {
+  text-align: center;
+}
+
+.radar-chart {
+  width: 100%;
+  max-width: 460px;
+  height: auto;
+}
+
+.radar-ring {
+  fill: none;
+  stroke: var(--line);
+  stroke-width: 1;
+}
+
+.radar-ring-outer {
+  stroke: var(--muted);
+  stroke-opacity: 0.35;
+}
+
+.radar-spoke {
+  stroke: var(--line);
+  stroke-width: 1;
+}
+
+.radar-data {
+  fill: var(--blue-2);
+  fill-opacity: 0.28;
+  stroke: var(--navy);
+  stroke-width: 2;
+  stroke-linejoin: round;
+}
+
+.radar-point {
+  fill: var(--navy);
+  stroke: var(--surface);
+  stroke-width: 2;
+}
+
+.radar-label {
+  fill: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+  font-family: "Inter", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.radar-caption {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 0.86rem;
+}
+
+.expertise-level-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.expertise-level-item {
+  display: grid;
+  grid-template-columns: 10px 1fr auto;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--line);
+}
+
+.expertise-level-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.expertise-level-item .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--blue-2);
+}
+
+.expertise-level-item .dot-building {
+  background: var(--cyan);
+}
+
+.expertise-level-item .label {
+  color: var(--navy);
+  font-weight: 700;
+  font-size: 0.94rem;
+}
+
+.expertise-level-item .level {
+  color: var(--muted);
+  font-size: 0.86rem;
+  white-space: nowrap;
 }
 
 .achievement-card {
@@ -1037,6 +1157,11 @@ a.nav-contact {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .expertise-visual-grid {
+    grid-template-columns: 1fr;
+    padding: 24px;
+  }
+
   .section-heading-row {
     align-items: start;
     flex-direction: column;
@@ -1108,6 +1233,15 @@ a.nav-contact {
   .proof-gallery-grid,
   .ai-project-grid {
     grid-template-columns: 1fr;
+  }
+
+  .expertise-visual-grid {
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .expertise-level-item .label {
+    font-size: 0.88rem;
   }
 
   .hero-moment {
