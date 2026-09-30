@@ -231,9 +231,9 @@ a.nav-contact {
 }
 
 .hero h1 {
-  max-width: 800px;
-  font-size: clamp(3.4rem, 7vw, 6.8rem);
-  line-height: 0.98;
+  max-width: 620px;
+  font-size: clamp(2.1rem, 3.4vw, 3.1rem);
+  line-height: 1.08;
 }
 
 .hero h1 span {
@@ -246,6 +246,34 @@ a.nav-contact {
   margin: 28px 0 0;
   color: var(--muted);
   font-size: 1.13rem;
+}
+
+.hero-moment {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  max-width: 520px;
+  margin: 30px 0 0;
+  padding: 10px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow);
+}
+
+.hero-moment img {
+  width: 84px;
+  height: 84px;
+  border-radius: 12px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.hero-moment figcaption {
+  color: var(--navy-2);
+  font-size: 0.84rem;
+  font-weight: 650;
+  line-height: 1.45;
 }
 
 .hero-tags {
@@ -440,6 +468,89 @@ a.nav-contact {
   max-width: 420px;
   margin: 0;
   color: var(--muted);
+}
+
+.career-chart {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 32px 36px 28px;
+  margin-bottom: 22px;
+}
+
+.career-chart-axis {
+  position: relative;
+  height: 18px;
+  margin-bottom: 8px;
+}
+
+.career-chart-axis span {
+  position: absolute;
+  transform: translateX(-50%);
+  color: var(--muted);
+  font-size: 0.74rem;
+  font-weight: 650;
+}
+
+.career-chart-axis span:first-child {
+  transform: none;
+}
+
+.career-chart-axis span:last-child {
+  transform: translateX(-100%);
+}
+
+.career-chart-track {
+  position: relative;
+  height: 40px;
+  background: var(--surface-soft);
+  border-radius: 10px;
+}
+
+.career-chart-seg {
+  position: absolute;
+  top: 0;
+  height: 40px;
+  border-radius: 8px;
+  box-shadow: 0 0 0 2px var(--surface);
+  cursor: default;
+}
+
+.career-chart-seg-current {
+  background-image: repeating-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.16) 0 8px,
+    transparent 8px 16px
+  );
+}
+
+.career-chart-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 22px;
+  margin-top: 18px;
+}
+
+.career-chart-legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--navy-2);
+  font-size: 0.84rem;
+  font-weight: 650;
+}
+
+.career-chart-legend-item em {
+  color: var(--muted);
+  font-style: normal;
+  font-weight: 500;
+}
+
+.career-chart-legend-item .swatch {
+  width: 12px;
+  height: 12px;
+  border-radius: 4px;
+  flex-shrink: 0;
 }
 
 .timeline {
@@ -691,6 +802,71 @@ a.nav-contact {
   line-height: 1.5;
 }
 
+.applied-ai-section {
+  background: linear-gradient(180deg, rgba(238, 243, 247, 0.72), rgba(255, 255, 255, 0));
+}
+
+.ai-project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.ai-project-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 28px;
+  min-height: 210px;
+}
+
+.ai-project-status {
+  display: inline-flex;
+  align-self: flex-start;
+  align-items: center;
+  padding: 5px 11px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 16px;
+}
+
+.ai-project-status.live {
+  background: #e7f6ec;
+  color: #1f7a44;
+}
+
+.ai-project-status.progress {
+  background: #eef3f7;
+  color: var(--navy-2);
+}
+
+.ai-project-card h3 {
+  margin: 0 0 8px;
+  font-family: "Manrope", sans-serif;
+  color: var(--navy);
+}
+
+.ai-project-card p {
+  margin: 0;
+  color: var(--muted);
+  flex-grow: 1;
+}
+
+.ai-project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 18px;
+  color: var(--blue);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
 .education-list {
   display: grid;
   gap: 16px;
@@ -856,7 +1032,8 @@ a.nav-contact {
   .expertise-grid,
   .achievement-grid,
   .testimonial-grid,
-  .proof-gallery-grid {
+  .proof-gallery-grid,
+  .ai-project-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -928,8 +1105,24 @@ a.nav-contact {
   .expertise-grid,
   .achievement-grid,
   .testimonial-grid,
-  .proof-gallery-grid {
+  .proof-gallery-grid,
+  .ai-project-grid {
     grid-template-columns: 1fr;
+  }
+
+  .hero-moment {
+    flex-direction: row;
+    max-width: 100%;
+  }
+
+  .career-chart {
+    padding: 24px 18px 20px;
+  }
+
+  .career-chart-axis span:nth-child(2),
+  .career-chart-axis span:nth-child(4),
+  .career-chart-axis span:nth-child(6) {
+    display: none;
   }
 
   .timeline-item {
